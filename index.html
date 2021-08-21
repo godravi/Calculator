@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <!-- Calculator MADE BY Ravi H. Vyas -->
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
-/*         CSS Code */
+        /*         CSS Code */
         @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 
         body {
@@ -58,7 +59,7 @@
 </head>
 
 <body>
-<!--     Main HTML -->
+    <!--     Main HTML -->
     <div class="container">
         <h1>CALCULATOR -By Ravi H. Vyas</h1>
 
@@ -101,7 +102,7 @@
     </div>
 </body>
 <script>
-//     JAVA SCRIPT
+    //     JAVA SCRIPT
     let screen = document.getElementById('screen');
     buttons = document.querySelectorAll('button');
     let screenValue = '';
@@ -114,6 +115,7 @@
                 screenValue += buttonText;
                 screen.value = screenValue;
             }
+
             else if (buttonText == 'C') {
                 screenValue = '';
                 screen.value = screenValue;
@@ -121,12 +123,18 @@
             else if (buttonText == '=') {
                 screen.value = eval(screenValue)
             }
+            else if (buttonText == '%') {
+                screenValue = screenValue/100;
+                screen.value = screenValue
+            }
             else {
                 screenValue += buttonText;
                 screen.value = screenValue;
             }
 
-        })
+
+            })
+
     }</script>
 
 </html>
